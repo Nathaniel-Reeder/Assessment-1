@@ -49,7 +49,19 @@ const pinkPrice = .55
     Log `totalAcres` to the console.
 */
 
-// CODE HERE
+let totalAcres = 0
+//Defining a variable called totalAcres
+
+
+for(i = 0; i < fujiAcres.length; i++){
+    // Creating the for loop, i begins at 0 and later in the loop will be used to start the reference at the 0 index of the array. The loop will stop when every index of the first array has been checked.
+    let dailyAcres = fujiAcres[i] + galaAcres[i] + pinkAcres[i]
+    //A variable to hold the sum of the 3 arrays on a given day
+    totalAcres += dailyAcres
+    // Increases the value of totalAcres by the sum of the 3 arrays for a given day.
+}
+console.log(totalAcres)
+// Logs the total acres for the week once the for loop has completed the calculation.
 
 
 
@@ -67,10 +79,9 @@ const pinkPrice = .55
     Log `averageDailyAcres` to the console.
 */
 
-// CODE HERE
-
-
-
+let averageDailyAcres = totalAcres / 7
+//Takes the total from the totalAcres variable and divides it by the days of the week (7)
+console.log(averageDailyAcres)
 
 
 // PROBLEM 3
@@ -105,9 +116,14 @@ const pinkPrice = .55
 let acresLeft = 174 
 let days = 0
 
-// CODE HERE
+while(acresLeft > 0){
+    days++
+    //increments the value of the days variable by 1 when the loop runs.
+    acresLeft -= averageDailyAcres
+    //subtracts the value of averageDailyAcres (calculated earlier) from acresLeft
+}
 
-
+console.log(days)
 
 // PROBLEM 4
 
@@ -133,15 +149,19 @@ let days = 0
     values to the new arrays.
 */
 
-// CODE HERE
+let fujiTons = fujiAcres.slice(0,7)
+let galaTons = galaAcres.slice(0,7)
+let pinkTons = pinkAcres.slice(0,7)
+//Creates copies of the above arrays for the loop below to work with.
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+for(let i = 0; i < fujiTons.length; i++){
+    fujiTons[i] = fujiTons[i] * 6.5
+    galaTons[i] = galaTons[i] * 6.5
+    pinkTons[i] = pinkTons[i] * 6.5
+}
+//multiplies each element of the arrays mentioned by 6.5 to get the tons ready. 
 
-
-
-
+console.log(fujiTons,galaTons,pinkTons)
 
 
 // PROBLEM 5
@@ -160,15 +180,23 @@ let days = 0
     Hint: there are 2000 pounds in a ton.
 */
 
-// CODE HERE 
+let fujiTonsTotal = 0
+let galaTonsTotal = 0
+let pinkTonsTotal = 0
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+for(i = 0; i < fujiTons.length; i++){
+   fujiTonsTotal += fujiTons[i]
+   galaTonsTotal += galaTons[i]
+   pinkTonsTotal += pinkTons[i]
+   //adds up the tons of each variety
+}
 
+let fujiPounds = fujiTonsTotal * 2000
+let galaPounds = galaTonsTotal * 2000
+let pinkPounds = pinkTonsTotal * 2000
+//Converts the total tons of each type to total pounds of each type
 
-
-
+console.log(fujiPounds,galaPounds,pinkPounds)
 
 
 // PROBLEM 6
@@ -187,13 +215,13 @@ let days = 0
     console. 
 */
 
-// CODE HERE
+let fujiProfit = fujiPounds * .89
+let galaProfit = galaPounds * .64
+let pinkProfit = pinkPounds * .55
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+//Calculates the profit using the pound variables defined earlier
 
-
+console.log(fujiProfit, galaProfit, pinkProfit)
 
 
 
@@ -208,4 +236,6 @@ let days = 0
     Log `totalProfit` to the console.
 */
 
-// CODE HERE
+let totalProfit = fujiProfit + galaProfit + pinkProfit
+//Sums up the totals of the profit variables calculated earlier
+console.log(totalProfit)
