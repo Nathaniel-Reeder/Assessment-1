@@ -9,7 +9,7 @@
     It should be a string containing your best definition of what Git is.
 */
 
-//CODE HERE
+let gitDefinition = "Git is a Version Control Software that records changes to a file or set of files over time. It allows you to recall earlier versions as needed."
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -17,7 +17,7 @@
     It should be a string containing your best definition of what GitHub is.
 */
 
-//CODE HERE
+let gitHubDefinition = "GitHub is a website used in conjunction with the Git software to host your repositories in the cloud, and collaborate on them with others."
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -25,7 +25,7 @@
     It should be a string containing your best definition of what 'git init' does.
 */
 
-//CODE HERE
+let gitInitDefinition = "The git init command initializes a new Git repository in the current directory."
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -33,7 +33,7 @@
     It should be a string containing your best definition of what 'git clone' does.
 */
 
-//CODE HERE
+let gitCloneDefinition = "The git clone command points at an existing repository and makes a clone/copy of it in another location."
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -41,7 +41,7 @@
     It should be a string containing your best definition of what 'git status' does.
 */
 
-//CODE HERE
+let gitStatusDefinition = "The git status command shows the status of the working directory and the staging area."
 
 //////////////////PROBLEM 6////////////////////
 /*
@@ -52,7 +52,8 @@
     It should be a string containing the code to add all files.
 */
 
-//CODE HERE
+let gitAddDefinition = "The git add command moves your file to the staging area so it will go into the repository with the next commit."
+let gitAddCode = "git add ."
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -63,7 +64,9 @@
     It should be a string containing the code to commit using the message "initial commit".
 */
 
-//CODE HERE
+let gitCommitDefinition = "The git commit command will put everything in the staging area into the repository, with a message describing what is being put in, creating a snapshot."
+
+let gitCommitCode = 'git commit -m "Your Message Here"'
 
 
 //////////////////PROBLEM 8////////////////////
@@ -72,4 +75,5 @@
     It should be a string containing your best definition of what 'git push' does.
 */
 
-//CODE HERE
+let gitPushDefinition = "The git push command will upload your local repository to a remote repository (such as GitHub)"
+
